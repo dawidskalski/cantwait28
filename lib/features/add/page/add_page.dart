@@ -25,8 +25,18 @@ class _AddPageState extends State<AddPage> {
           if (state.saved) {
             Navigator.of(context).pop();
           }
-
-          
+          if (state.errorMessage.isNotEmpty) {
+            ScaffoldMessenger.of(context).showSnackBar(
+              const SnackBar(
+                content: Row(
+                  children: [
+                    Icon(Icons.delete),
+                    Text('Something went wrong'),
+                  ],
+                ),
+              ),
+            );
+          }
         },
         child: BlocBuilder<AddCubit, AddState>(
           builder: (context, state) {

@@ -1,4 +1,4 @@
-import 'package:cantwait28/features/home/pages/home_page.dart';
+import 'package:cantwait28/features/auth/pages/auth__gate.dart';
 import 'package:cantwait28/firebase_options.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
@@ -22,7 +22,7 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.purple,
         useMaterial3: false,
       ),
-      home: const HomePage(),
+      home: AuthGate(),
     );
   }
 }

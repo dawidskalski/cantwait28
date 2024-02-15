@@ -22,7 +22,7 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.purple,
         useMaterial3: false,
       ),
-      home: AuthGate(),
+      home: const AuthGate(),
     );
   }
 }
